@@ -1,0 +1,20 @@
+:root {
+    /*colors*/
+    --color-primary: #68B738;
+    --color-secondary: #F2F2F2;
+
+    --color-form-border: #E7E7E7;
+
+    /*text*/
+    --color-text: #000;
+    --color-text-secondary: #444444;
+
+    --line-height: 1.5;
+    --line-height-heading: 1;
+
+    --font-size-paragraph: 16px;
+    --font-size-form: 20px;
+
+    --font-paragraph: 'Arial';
+    --font-heading: 'Oswald';
+}

@@ -1,0 +1,66 @@
+@import url(styles.css);
+
+body {
+    font-size: var(--font-size-form);
+}
+label, input {
+                                                 /*color: var(--color-text-secondary);*/
+    font-size: var(--font-size-form);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    vertical-align: middle; 
+}
+label {
+    margin: 0 15px 0 0;
+}
+input {
+    padding: 14px 20px;
+    border: 1px solid var(--color-form-border);
+}
+.checkbox-container {
+    position: relative;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px 0 0;
+    opacity: 0;
+    cursor: pointer;
+}                                   
+input[type="checkbox"] ~ label::before,
+input[type="radio"] ~ label::before {
+    content: '';
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 1px solid var(--color-form-border);
+    background-color: #fff;
+
+    cursor: pointer;
+}
+input[type="radio"]~label::before {
+    border-radius: 20px;
+}
+input[type="checkbox"]:checked ~ label::before,
+input[type="radio"]:checked ~ label::before {
+    content: '';
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+}
+input[type="checkbox"]:checked ~ label::before {
+    background: url(../img/form/checkbox.svg) no-repeat center white;
+}
+input[type="radio"]:checked ~ label::before {
+    background: url(../img/form/radiobutton.svg) no-repeat center white;
+}

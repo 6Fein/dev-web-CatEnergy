@@ -1,0 +1,74 @@
+@import url(variables.css);
+@import url(fonts.css);
+@import url(reset.css);
+
+* {
+    box-sizing: border-box;
+}
+.container-main {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+.container-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 80px;
+}
+body {
+    color: var(--color-text);
+    line-height: var(--line-height);
+    font-family: var(--font-paragraph);
+    font-size: var(--font-size-paragraph);
+    font-weight: 400;
+    background-color: #fff;
+}
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+h1, h2, h3, h4, h5, h6,
+.title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
+    font-family: var(--font-heading);
+    line-height: var(--line-height-heading);
+}
+h1,
+.title-1 {
+    font-size: 60px;
+}
+h2,
+.title-2 {
+    font-size: 60px;
+}
+h3,
+.title-3 {
+    font-size: 36px;
+}
+h4,
+.title-4 {
+    font-size: 20px;
+}
+h5,
+.title-5 {
+    font-size: 20px;
+}
+h6,
+.title-6 {
+    font-size: 20px;
+}
+.button-main {
+    padding: 14px 20px;
+
+    background-color: var(--color-primary);
+    font-family: var(--font-heading);
+    /*font-size*/
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+}
+.button-main:hover {
+    background-color: #5EAA2F;
+}
+.button-main:active {
+    background-color: #5EAA2F;
+    color: #8EC36D;
+}
