@@ -7,6 +7,7 @@
 }
 .container-main {
     max-width: 1220px;
+    width: calc(100vw - 40px);
     margin: 0 auto;
 }
 .container-grid-2col {
@@ -26,6 +27,7 @@ body {
     background-color: #000;
     color: #fff;
 }
+/*___________________________________________headings start*/
 h1, h2, h3, h4, h5, h6,
 .title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
     font-family: var(--font-heading);
@@ -55,20 +57,188 @@ h6,
 .title-6 {
     font-size: 20px;
 }
-.button-main {
-    padding: 14px 20px;
+/*___________________________________________headings end*/
+/*___________________________________________buttons start*/
+.button-catalog-main {
+    padding: 12px 26px;
 
     background-color: var(--color-primary);
     font-family: var(--font-heading);
-    /*font-size*/
+                                                                    /*font-size INHERITED or type included*/
+    line-height: 1.25;
     color: #fff;
     text-transform: uppercase;
     border: none;
 }
-.button-main:hover {
-    background-color: #5EAA2F;
+.button-catalog-main:hover {
+    background-color: var(--color-primary-hover);
 }
-.button-main:active {
-    background-color: #5EAA2F;
-    color: #8EC36D;
+.button-catalog-main:active {
+    background-color: var(--color-primary-hover);
+    color: #8EC36D;                                                                 /*OPACITY*/
 }
+.button-grey {
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+}
+.button-grey:hover {
+    background-color: var(--color-secondary-hover);
+}
+.button-grey:active {
+    background-color: var(--color-secondary-hover);
+}
+/*___________________________________________buttons end*/
+/*___________________________________________header start*/
+.header-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.logo {
+    height: 59px;
+    width: 202px;
+    background: url(../img/logo-desktop.svg) no-repeat transparent;
+}
+.header-nav input,
+.header-nav label {
+    display: none;
+}
+.header-nav ul {
+    margin-top: 24px;
+    display: flex;
+    justify-content: end;
+}
+.header-nav li:nth-child(n+2) {
+    margin-left: 35px;
+}
+.menu-link {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+/*____________________________________header end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px /*767px*/) {                              /*разобрать медиазапросы*/
+    
+    /*____________________________________________header start*/
+    .logo {
+        height: 51px;
+        width: 174px;
+        background: url(../img/logo-tablet.svg) no-repeat transparent;
+    }
+    .header-nav ul {
+        margin-top: 20px;
+    }
+    .header-nav li:nth-child(n+2) {
+        margin-left: 15px;
+    }
+    .menu-link {
+        font-size: 18px;
+    }
+    /*____________________________________________header end*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px /*575px*/) {
+        
+    /*________________________________________________header start*/
+    .header-nav {
+        align-items: center;
+        background-color: #fff;
+    }
+    .logo {
+        height: 37px;
+        width: 33px;
+        background: url(../img/logo-mobile.svg) no-repeat transparent;
+    }
+    .header-title {
+        height: 18px;
+        width: 101px;
+        background: url(../img/title-header-mobile.svg) no-repeat transparent;
+    }
+    .header-nav label {
+        display: block;
+        height: 18px;
+        width: 24px;
+        background: url(../img/burger-icon.svg) no-repeat transparent;
+        cursor: pointer;
+    }
+    .header-nav nav {
+        position: absolute;
+        top: -200px;
+        background-color: white;
+        width: 100%;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    .header-nav input:checked~nav {
+        top: 100%;
+    }
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    .header-nav li {
+        height: 54px;
+        display: flex;
+        align-items: center;
+    }
+    /*__________________________________________header end*/
+}
+

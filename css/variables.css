@@ -1,7 +1,9 @@
 :root {
     /*colors*/
     --color-primary: #68B738;
+    --color-primary-hover: #5EAA2F;
     --color-secondary: #F2F2F2;
+    --color-secondary-hover: #ebebeb;
 
     --color-form-border: #E7E7E7;
 

@@ -1,10 +1,16 @@
 @import url(styles.css);
+@import url(index.css);
+@import url(catalog.css);
+@import url(form.css);
 
 ol{
     list-style: decimal inside;
 }
 ul {
     list-style: square inside;
+}
+.header-nav ul {
+    list-style: none;
 }
 .card {
     padding: 20px;
