@@ -16,6 +16,7 @@
     grid-column-gap: 80px;
 }
 body {
+    position: relative;
     color: var(--color-text);
     line-height: var(--line-height);
     font-family: var(--font-paragraph);
@@ -64,18 +65,23 @@ h6,
 
     background-color: var(--color-primary);
     font-family: var(--font-heading);
-                                                                    /*font-size INHERITED or type included*/
+    font-size: var(--font-size-paragraph);
     line-height: 1.25;
     color: #fff;
     text-transform: uppercase;
     border: none;
+    cursor: pointer;
 }
 .button-catalog-main:hover {
     background-color: var(--color-primary-hover);
 }
 .button-catalog-main:active {
     background-color: var(--color-primary-hover);
-    color: #8EC36D;                                                                 /*OPACITY*/
+    color: #8EC36D;
+}
+.button-big {
+    font-size: 20px;
+    padding: 14px 26px;
 }
 .button-grey {
     background-color: var(--color-secondary);
@@ -86,11 +92,11 @@ h6,
 }
 .button-grey:active {
     background-color: var(--color-secondary-hover);
+    color: #B3B3B3;
 }
 /*___________________________________________buttons end*/
 /*___________________________________________header start*/
 .header-nav {
-    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
@@ -105,6 +111,7 @@ h6,
     display: none;
 }
 .header-nav ul {
+    position: relative;
     margin-top: 24px;
     display: flex;
     justify-content: end;
@@ -113,12 +120,33 @@ h6,
     margin-left: 35px;
 }
 .menu-link {
+    position: relative;
     font-family: var(--font-heading);
     font-size: 20px;
     line-height: 1;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-text);
+}
+.menu-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -7px;
+    background-color: var(--color-primary);
+    height: 2px;
+    width: 0;
+    transition: 0.3s;
+}
+.menu-link:hover::after {
+    width: 100%;
+}
+.menu-link.active:hover {
+    opacity: 0.6;
+}
+.menu-link.active::after{
+    width: 100%;
 }
 /*____________________________________header end*/
 
@@ -198,8 +226,19 @@ h6,
         
     /*________________________________________________header start*/
     .header-nav {
+        position: relative;
+        width: calc(100vw - 40px);
         align-items: center;
+        z-index: 100;
+        border-bottom: 1px solid var(--color-form-border);
+    }
+    .header-nav::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
         background-color: #fff;
+        width: 100%;
+        height: 100%;
     }
     .logo {
         height: 37px;
@@ -222,8 +261,9 @@ h6,
         position: absolute;
         top: -200px;
         background-color: white;
+        border-bottom: 1px solid var(--color-form-border);
         width: 100%;
-        z-index: -1;
+        z-index: -2;
         transition: 0.5s;
     }
     .header-nav input:checked~nav {

@@ -12,13 +12,15 @@
 
 <body>
 <div class="container-main">
-<!--HEADER START-->
+
     <div style="height: 200px; background-color: red; opacity: 0.5;"></div>
 
 
+
+<!--HEADER START-->
     <header class="header-nav">
 
-        <div class="logo"></div>
+        <a href="index.html"><div class="logo"></div></a>
         <div  class="header-title"></div>
 
         <input id="burger" type="checkbox">
@@ -28,7 +30,7 @@
             <ul>
                 <li><a class="menu-link" href="index.html">Главная</a></li>
                 <li><a class="menu-link" href="catalog.html">Каталог продукции</a></li>
-                <li><a class="menu-link" href="form.html">Подбор программы</a></li>
+                <li><a class="menu-link active" href="form.html">Подбор программы</a></li>
             </ul>
         </nav>
     </header>
@@ -36,37 +38,41 @@
 
 <!--MAIN CONTENT START-->
 
-<fieldset>
-    <label for="name">Your name:</label>
-    <input type="text" id="name" name="name" placeholder="text type">
-</fieldset>
 
-<fieldset>
-    <div class="checkbox-container">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label>
-    </div>
-    <div class="checkbox-container">
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label>
-    </div>
-    <div class="checkbox-container">
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">JavaScript</label>
-    </div>
-</fieldset>
 
-<fieldset>
-    <div class="checkbox-container">
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> I have a bike</label>
-    </div>
-    <div class="checkbox-container">
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2"> I have a car</label>
-    </div>
-</fieldset>
 
+<form>
+    <fieldset>
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name" placeholder="text type">
+    </fieldset>
+
+    <fieldset>
+        <div class="checkbox-container">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <div class="checkbox-container">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label>
+        </div>
+    </fieldset>
+</form>
 
 
 </div> <!--container-main end-->

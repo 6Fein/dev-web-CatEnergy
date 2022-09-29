@@ -1,1 +1,27 @@
 @import url(styles.css);
+
+.banner {
+    padding: 20vh 0 0 80px;
+    border-bottom: 1px solid red;
+    height: calc(100vh - 75px); /*minus header*/
+    background: url(../img/index/banner-img.png) no-repeat 360px 20%;
+
+}
+.bg-img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 45vw;
+    height: 100vh;
+    width: 55vw;
+    background-image: url(../img/index/index-background-desktop.jpg);
+    background-size: cover;
+}
+.banner h1 {
+    width: 414px;
+    margin-bottom: 40px;
+}
+.banner p {
+    text-transform: uppercase;
+    margin-bottom: 52px;
+}

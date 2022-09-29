@@ -20,16 +20,16 @@ input {
 .checkbox-container {
     position: relative;
 }
-input[type="radio"],
-input[type="checkbox"] {
+form [type="radio"],
+form [type="checkbox"] {
     width: 40px;
     height: 40px;
     margin: 0 20px 0 0;
     opacity: 0;
     cursor: pointer;
 }                                   
-input[type="checkbox"] ~ label::before,
-input[type="radio"] ~ label::before {
+form [type="checkbox"] ~ label::before,
+form [type="radio"] ~ label::before {
     content: '';
     box-sizing: border-box;
     width: 40px;
@@ -43,11 +43,11 @@ input[type="radio"] ~ label::before {
 
     cursor: pointer;
 }
-input[type="radio"]~label::before {
+form [type="radio"]~label::before {
     border-radius: 20px;
 }
-input[type="checkbox"]:checked ~ label::before,
-input[type="radio"]:checked ~ label::before {
+form [type="checkbox"]:checked ~ label::before,
+form [type="radio"]:checked ~ label::before {
     content: '';
     box-sizing: border-box;
     width: 40px;
@@ -58,9 +58,9 @@ input[type="radio"]:checked ~ label::before {
 
     cursor: pointer;
 }
-input[type="checkbox"]:checked ~ label::before {
+form [type="checkbox"]:checked ~ label::before {
     background: url(../img/form/checkbox.svg) no-repeat center white;
 }
-input[type="radio"]:checked ~ label::before {
+form [type="radio"]:checked ~ label::before {
     background: url(../img/form/radiobutton.svg) no-repeat center white;
 }
