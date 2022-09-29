@@ -1,19 +1,25 @@
 @import url(styles.css);
-
+.menu-link {
+    color: #fff;
+}
+.menu-link::after {
+    background-color: #fff;
+}
+/*__________________________________________banner start*/
 .banner {
     padding: 20vh 0 0 80px;
-    border-bottom: 1px solid red;
     height: calc(100vh - 75px); /*minus header*/
     background: url(../img/index/banner-img.png) no-repeat 360px 20%;
-
+    margin-bottom: 82px;
 }
-.bg-img {
+.banner .banner--bg-img {
     position: absolute;
+    height: 100vh;
+    width: calc(50vw + 40px);
+    overflow-x: hidden;
     top: 0;
     z-index: -1;
-    left: 45vw;
-    height: 100vh;
-    width: 55vw;
+    left: calc(50vw - 40px);                                                                             /*TO DO*/
     background-image: url(../img/index/index-background-desktop.jpg);
     background-size: cover;
 }
@@ -24,4 +30,88 @@
 .banner p {
     text-transform: uppercase;
     margin-bottom: 52px;
+}
+/*__________________________________________banner end*/
+/*__________________________________________program card*/
+.card-program {
+    background-color: var(--color-secondary);
+    padding: 47px 52px;
+}
+.card-program .row {
+    align-items: center;
+    margin-bottom: 39px;
+}
+.card-program--picture {
+    margin-right: 46px;
+    height: 107px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+.card-program--picture::before {
+    content: '';
+    position: absolute;
+    left: center;
+    top: center;
+    z-index: -1;
+    background-color: var(--color-primary);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+.card-program h3 {
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+.card-program p {
+    margin-bottom: 27px;
+}
+/*__________________________________________program card end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px /*767px*/) {
+    .menu-link {
+        color: var(--color-text);
+    }
+    .menu-link::after {
+        background-color: var(--color-primary);
+    }
+
 }
