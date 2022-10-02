@@ -5,19 +5,9 @@
 * {
     box-sizing: border-box;
 }
-.container-main {
-    max-width: 1220px;
-    width: calc(100vw - 40px);
-    margin: 0 auto;
-}
-.container-grid-2col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 80px;
-}
-.row {
-    display: flex;
-    flex-direction: row;
+::selection {
+    background-color: #000;
+    color: #fff;
 }
 body {
     position: relative;
@@ -28,11 +18,24 @@ body {
     font-weight: 400;
     background-color: #fff;
 }
-::selection {
-    background-color: #000;
-    color: #fff;
+/*__________________________________containers start*/
+.container-main {
+    max-width: 1220px;
+    width: calc(100vw - 40px);
+    margin: 0 auto;
 }
-/*___________________________________________headings start*/
+.container-grid-2col,
+.container-grid-2col-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: var(--gap-between-columns);
+}
+.row-box {
+    display: flex;
+    flex-direction: row;
+}
+/*_____________________________________containers end*/
+/*__________________________________________headings start*/
 h1, h2, h3, h4, h5, h6,
 .title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
     font-family: var(--font-heading);
@@ -99,6 +102,7 @@ h6,
     background-color: var(--color-secondary-hover);
     color: #B3B3B3;
 }
+/*__________________________link*/
 .link-arrow {     /*independent*/
     position: relative;
     font-family: var(--font-heading);
@@ -220,8 +224,10 @@ h6,
 
 
 
-@media screen and (max-width: 991px /*767px*/) {                              /*разобрать медиазапросы*/
-    
+@media screen and (max-width: 991px) {
+    .container-grid-2col {
+        display: block;
+    }
     /*____________________________________________header start*/
     .logo {
         height: 51px;
@@ -267,15 +273,52 @@ h6,
 
 
 
-@media screen and (max-width: 767px /*575px*/) {
-        
+@media screen and (max-width: 767px) {
+    .container-grid-2col-inner {
+        display: block;
+    }
+    /*___________________________________________headings start*/
+    h1,
+    .title-1 {
+        font-size: 36px;
+    }
+    h2,
+    .title-2 {
+        font-size: 36px;
+    }
+    h3,
+    .title-3 {
+        font-size: 24px;
+    }
+    h4,
+    .title-4 {
+        font-size: 16px;
+    }
+    h5,
+    .title-5 {
+        font-size: 16px;
+    }
+    h6,
+    .title-6 {
+        font-size: 16px;
+    }
+    /*___________________________________________headings end*/
+    /*___________________________________________buttons start*/
+    .button-catalog-main {
+        padding: 11px 26px;
+    }
+    .button-big {
+        font-size: var(--font-size-paragraph);
+        padding: 11px 26px;
+    }
+    /*___________________________________________buttons end*/
     /*________________________________________________header start*/
     .header-nav {
         position: relative;
         width: calc(100vw - 40px);
         align-items: center;
         z-index: 100;
-        border-bottom: 1px solid var(--color-form-border);
+        border-bottom: 1px solid var(--color-border);
     }
     .header-nav::before {
         content: '';
@@ -306,7 +349,7 @@ h6,
         position: absolute;
         top: -200px;
         background-color: white;
-        border-bottom: 1px solid var(--color-form-border);
+        border-bottom: 1px solid var(--color-border);
         width: 100%;
         z-index: -2;
         transition: 0.5s;

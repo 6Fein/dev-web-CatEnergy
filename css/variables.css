@@ -1,11 +1,13 @@
 :root {
+    --gap-between-columns: 80px;
+
     /*colors*/
     --color-primary: #68B738;
     --color-primary-hover: #5EAA2F;
     --color-secondary: #F2F2F2;
     --color-secondary-hover: #ebebeb;
 
-    --color-form-border: #E7E7E7;
+    --color-border: #E7E7E7;
 
     /*text*/
     --color-text: #000;
@@ -19,4 +21,32 @@
 
     --font-paragraph: 'Roboto';
     --font-heading: 'Oswald';
+
+
+    /*margins*/
+    --margin-bottom-index-main: 75px;
+    --margin-bottom-index-secondary: 35px;
+}
+
+
+
+
+
+@media screen and (max-width: 991px) {
+    :root {
+        --gap-between-columns: 150px;
+        --margin-bottom-index-main: 60px;
+        
+    }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    :root {
+        --font-size-paragraph: 14px;
+        --margin-bottom-index-main: 35px;  /*should be 35/ 35-20=15*/
+        --margin-bottom-index-secondary: 20px;
+    }
 }
