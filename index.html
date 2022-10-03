@@ -35,19 +35,21 @@
 
 
     <section class="banner">
-        <div class="banner--background-img"></div>
 
+        <div class="banner--background-img"></div>
         <div class="banner--content-box">
             <h1>Функциональное питание для котов</h1>
             <p class="title-4">Занялся собой? Займись котом!</p>
             <img src="img/index/banner-img.png" alt="picture">
             <a href="form.html"><button class="button-catalog-main button-big">подобрать программу</button></a>
         </div>
+
     </section>
 
 
 
     <section class="container-grid-2col">
+
         <div class="category">
             <div class="row-box">
                 <div class="category--picture">
@@ -69,41 +71,42 @@
             <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="link-arrow" href="catalog.html">каталог pro</a>
         </div>
+
     </section>
 
 
     <section class="how-it-works">
         <h2>Как это работает</h2>
-        <ol class="container-grid-2col">
-            <div class="container-grid-2col-inner">
-                <li> <!--1-->
-                    <div>
-                        <img src="img/index/how-it-works-icon-1.svg">
-                    </div>
-                    <p>Функциональное питание содержит только полезные питательные вещества.</p>
-                </li>
-                <li><!--2-->
-                    <div>
-                        <img src="img/index/how-it-works-icon-2.svg">
-                    </div>
-                    <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-                </li>
-            </div>
-            <div class="container-grid-2col-inner">
-                <li> <!--3-->
-                    <div>
-                        <img src="img/index/how-it-works-icon-3.svg">
-                    </div>
-                    <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
-                </li>
-                <li> <!--4-->
-                    <div>
-                        <img src="img/index/how-it-works-icon-4.svg">
-                    </div>
-                    <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-                </li>
-            </div>
+
+        <ol class="container-grid-4col">
+
+            <li> <!--1-->
+                <div>
+                    <img src="img/index/how-it-works-icon-1.svg">
+                </div>
+                <p>Функциональное питание содержит только полезные питательные вещества.</p>
+            </li>
+            <li><!--2-->
+                <div>
+                    <img src="img/index/how-it-works-icon-2.svg">
+                </div>
+                <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            </li>
+            <li> <!--3-->
+                <div>
+                    <img src="img/index/how-it-works-icon-3.svg">
+                </div>
+                <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+            </li>
+            <li> <!--4-->
+                <div>
+                    <img src="img/index/how-it-works-icon-4.svg">
+                </div>
+                <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            </li>
+            
         </ol>
+
     </section>
 
 
@@ -111,21 +114,40 @@
     <h2>Живой пример</h2>
 
         <div class="container-grid-2col">
-            <div class="example--description">
-                <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-                <div class="statistics">
-                    <div class="row-box">
-                        <div>5 кг</div>
-                        <div>60 дней</div>
-                    </div>
-                    <p>
-                        <span>затраты на питание:</span>
-                        <span>7 000 грн.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="example--slider">
+            <div>
 
+                <p class="example--description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+
+                <div class="statistics">
+
+                    <div class="row-box">
+                        <div class="statistics--numbers">
+                            5 кг
+                            <p class="caption">снижение веса</p>
+                        </div>
+
+                        <div class="statistics--numbers">
+                            60 дней
+                            <p class="caption">затрачено времени</p>
+                        </div>
+                    </div>
+
+                    <div class="cost title-4">
+                        <p>затраты на питание:</p>
+                        <p>7 000 грн.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="example--slider">
+                <div id="comparison">
+                    <figure>
+                        <div id="divisor"></div>
+                    </figure>
+                    <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+                </div>
             </div>
         </div>
     </section>
@@ -137,6 +159,9 @@
 
 <!--MAIN CONTENT END-->
 </div> <!--end container-main-->
+
+<script src="js/index--before-after-slider.js"></script>
+
 </body>
 
 </html>

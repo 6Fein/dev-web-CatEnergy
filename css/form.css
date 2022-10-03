@@ -59,8 +59,8 @@ form [type="radio"]:checked ~ label::before {
     cursor: pointer;
 }
 form [type="checkbox"]:checked ~ label::before {
-    background: url(../img/form/checkbox.svg) no-repeat center white;
+    background: url(../img/form/checkbox.svg) no-repeat center #fff;
 }
 form [type="radio"]:checked ~ label::before {
-    background: url(../img/form/radiobutton.svg) no-repeat center white;
+    background: url(../img/form/radiobutton.svg) no-repeat center #fff;
 }

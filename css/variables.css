@@ -1,5 +1,6 @@
 :root {
     --gap-between-columns: 80px;
+    --padding-horizontal-main-container: 20px;
 
     /*colors*/
     --color-primary: #68B738;

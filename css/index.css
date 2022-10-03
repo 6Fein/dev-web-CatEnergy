@@ -22,6 +22,7 @@ h2, section {
     position: absolute;
     height: 100vh;
     width: calc( 50vw + (var(--gap-between-columns) / 2) );       /*50vw + half of grid-column-gap: 80px;*/
+    overflow-x: hidden;
     top: 0;
     z-index: -1;
     right: 0;
@@ -55,6 +56,7 @@ h2, section {
     padding: 50px;
     display: flex;
     flex-direction: column;
+    margin-bottom: var(--margin-bottom-index-secondary);
 }
 .category .row-box {
     align-items: center;
@@ -113,6 +115,7 @@ h2, section {
     width: 100%;
     display: flex;
     flex-direction: column;
+    color: var(--color-text-secondary);
 }
 .how-it-works li::before {
     content: counter(item);
@@ -137,13 +140,143 @@ h2, section {
 }
 /*_________________________________.how-it-works end*/
 /*_____________________________________example*/
-.example div {
-    border: 1px red solid;
+.example {
+    position: relative;
 }
+.example::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--margin-bottom-index-main) + var(--margin-bottom-index-secondary));
+    background-color: var(--color-secondary);
+    width: calc(100% + (var(--padding-horizontal-main-container) * 2) );
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+    overflow-x: hidden;
+}
+.example--description {
+    padding-top: 30px;
+    color: var(--color-text-secondary);
+    max-width: 440px;
+    margin-bottom: var(--margin-bottom-index-main);
+}
+.statistics--numbers {
+    position: relative;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    width: 162px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 42px 60px 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    line-height: 1;
+}
+.statistics .caption {
+    position: absolute;
+    top: 63px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    background-color: var(--color-secondary);
+    padding: 0 7px;
+    text-transform: lowercase;
+    font-family: var(--font-paragraph);
+}
+.statistics .cost {
+    display: flex;
+    justify-content: space-between;
+    max-width: 327px;
+    text-transform: uppercase;
+}
+/*_____________________________________example slider before after*/
 .example--slider {
+    width: fit-content;
+}
+
+div#comparison {
+    height: 269px;
+    width: 419px;
+}
+div#comparison figure {
+    background-image: url(../img/index/example-before.jpg);
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+div#comparison figure>img {
+    position: relative;
     width: 100%;
 }
-/*_____________________________________example end*/
+div#comparison figure div {
+    background-image: url(../img/index/example-after.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+    bottom: 0;
+    height: 100%;
+}
+/*________________________________________ slider input*/
+.example--slider input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    background-color: var(--color-border);
+    width: 100%;
+    height: 6px;
+}
+.example--slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--color-border);
+    background: url(../img/index/slider-control.svg) no-repeat center #fff;
+    border-radius: 17px;
+}
+.example--slider input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--color-border);
+    background: url(../img/index/slider-control.svg) no-repeat center #fff;
+    border-radius: 17px;
+}
+.example--slider input[type=range]:hover::-webkit-slider-thumb {
+    border-color: var(--color-primary);
+}
+.example--slider input[type=range]:hover::-moz-range-thumb {
+    border-color: var(--color-primary);
+}
+/*___________________________________________ slider caption*/
+.example--slider input[type=range]::before {
+    content: 'было';
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    top: 20px;
+    left: 20px;
+}
+.example--slider input[type=range]::after {
+    content: 'стало';
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    top: 20px;
+    right: 20px;
+}
+/*_______________________________________________example end*/
 
 
 
@@ -189,10 +322,6 @@ h2, section {
     /*___________________________________ category*/
     .category {
         position: relative;
-        margin-bottom: var(--margin-bottom-index-secondary);
-    }
-    .category:last-child {
-        margin-bottom: 0;
     }
     .category .row-box {
         flex-direction: row-reverse;
@@ -214,6 +343,48 @@ h2, section {
         margin: var(--margin-bottom-index-secondary) 0;
     }
     /*__________________________________________.how-it-works end*/
+    /*_____________________________________example*/
+    .example::before {
+        height: 360px;
+        top: 360px;
+    }
+    .example--description {
+        padding-top: 0;
+        max-width: 100%;
+    }
+    .statistics {
+        display: flex;
+        justify-content: space-between;
+    }
+    .statistics .caption {
+        background-color: #fff;
+    }
+    .statistics .cost {
+        flex-direction: column;
+        justify-content: start;
+        text-align: end;
+        padding-top: 15px;
+    }
+    .example--slider {
+        width: 100%;
+        height: 350px;
+    }
+    .example--slider div#comparison {
+        margin: 0 auto;
+    }
+    .example--slider input[type=range]::before {
+        top: -13px;
+        left: -70px;
+    }
+    .example--slider input[type=range]::after {
+        top: -13px;
+        right: -70px;
+    }
+    /*_____________________________________example end*/
+
+
+
+
 }
 
 
@@ -304,9 +475,74 @@ h2, section {
         height: 60px;
         flex-shrink: 0;
     }
-
-
     /*__________________________________________.how-it-works end*/
-
+    /*____________________________________________example*/
+    .example::before {
+        height: 100%;
+        top: 0;
+    }
+    .example h2 {
+        padding-top: var(--margin-bottom-index-secondary);
+    }
+    .statistics {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .statistics--numbers {
+        width: 124px;
+        height: 56px;
+        margin: 0 30px 35px 0;
+        font-size: 24px;
+    }
+    .statistics--numbers:last-child {
+        margin-right: 0;
+    }
+    .statistics .caption {
+        background-color: var(--color-secondary);
+        top: 47px;
+        font-size: 12px;
+        width: 80px;
+        text-align: center;
+    }
+    .statistics .cost {
+        flex-direction: row;
+        padding: 0;
+        width: 230px;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .example--slider {
+        height: 260px;
+    }
+    div#comparison {
+        height: 175px;
+        width: 272px;
+    }
+    .example--slider input[type=range]::-webkit-slider-thumb {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+    .example--slider input[type=range]::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+    .example--slider input[type=range]::before {
+        font-size: 16px;
+        top: 15px;
+        left: 10px;
+    }
+    .example--slider input[type=range]::after {
+        font-size: 16px;
+        top: 15px;
+        right: 10px;
+    }
+    /*____________________________________________example end*/
 
 }

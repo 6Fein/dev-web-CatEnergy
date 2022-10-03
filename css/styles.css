@@ -21,14 +21,18 @@ body {
 /*__________________________________containers start*/
 .container-main {
     max-width: 1220px;
-    width: calc(100vw - 40px);
+    width: calc(100vw - (var(--padding-horizontal-main-container) * 2) );
     margin: 0 auto;
 }
 .container-grid-2col,
-.container-grid-2col-inner {
+.container-grid-4col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: var(--gap-between-columns);
+    grid-row-gap: var(--margin-bottom-index-secondary);
+}
+.container-grid-4col {
+    grid-template-columns: repeat(4, 1fr);
 }
 .row-box {
     display: flex;
@@ -228,6 +232,9 @@ h6,
     .container-grid-2col {
         display: block;
     }
+    .container-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+    }
     /*____________________________________________header start*/
     .logo {
         height: 51px;
@@ -274,7 +281,7 @@ h6,
 
 
 @media screen and (max-width: 767px) {
-    .container-grid-2col-inner {
+    .container-grid-4col {
         display: block;
     }
     /*___________________________________________headings start*/
