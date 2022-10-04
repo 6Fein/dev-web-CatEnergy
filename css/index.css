@@ -149,7 +149,8 @@ h2, section {
     z-index: -1;
     top: calc(var(--margin-bottom-index-main) + var(--margin-bottom-index-secondary));
     background-color: var(--color-secondary);
-    width: calc(100% + (var(--padding-horizontal-main-container) * 2) );
+    /*width: calc(100% + (var(--padding-horizontal-main-container) * 2) );*/
+    width: 100vw;
     left: 50%;
     transform: translate(-50%, 0);
     height: 100%;
@@ -196,7 +197,6 @@ h2, section {
 .example--slider {
     width: fit-content;
 }
-
 div#comparison {
     height: 269px;
     width: 419px;
@@ -222,6 +222,7 @@ div#comparison figure div {
     overflow: hidden;
     bottom: 0;
     height: 100%;
+    box-shadow: 0 5px 10px -2px var(--color-border);
 }
 /*________________________________________ slider input*/
 .example--slider input[type=range] {
@@ -256,7 +257,7 @@ div#comparison figure div {
 }
 /*___________________________________________ slider caption*/
 .example--slider input[type=range]::before {
-    content: 'было';
+    content: 'стало';
     position: absolute;
     text-transform: uppercase;
     font-size: 20px;
@@ -267,7 +268,7 @@ div#comparison figure div {
     left: 20px;
 }
 .example--slider input[type=range]::after {
-    content: 'стало';
+    content: 'было';
     position: absolute;
     text-transform: uppercase;
     font-size: 20px;
@@ -277,8 +278,6 @@ div#comparison figure div {
     right: 20px;
 }
 /*_______________________________________________example end*/
-
-
 
 
 
@@ -345,8 +344,7 @@ div#comparison figure div {
     /*__________________________________________.how-it-works end*/
     /*_____________________________________example*/
     .example::before {
-        height: 360px;
-        top: 360px;
+        height: 400px;
     }
     .example--description {
         padding-top: 0;
@@ -355,9 +353,6 @@ div#comparison figure div {
     .statistics {
         display: flex;
         justify-content: space-between;
-    }
-    .statistics .caption {
-        background-color: #fff;
     }
     .statistics .cost {
         flex-direction: column;
@@ -478,8 +473,8 @@ div#comparison figure div {
     /*__________________________________________.how-it-works end*/
     /*____________________________________________example*/
     .example::before {
-        height: 100%;
         top: 0;
+        height: 450px;
     }
     .example h2 {
         padding-top: var(--margin-bottom-index-secondary);
@@ -499,7 +494,6 @@ div#comparison figure div {
         margin-right: 0;
     }
     .statistics .caption {
-        background-color: var(--color-secondary);
         top: 47px;
         font-size: 12px;
         width: 80px;
