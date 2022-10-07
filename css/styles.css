@@ -29,7 +29,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: var(--gap-between-columns);
-    grid-row-gap: var(--margin-bottom-index-secondary);
+    grid-row-gap: var(--margin-bottom-secondary);
 }
 .container-grid-4col {
     grid-template-columns: repeat(4, 1fr);

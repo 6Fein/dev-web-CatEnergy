@@ -1,6 +1,9 @@
 :root {
-    --gap-between-columns: 80px;
+    --gap-between-columns: 80px;                /*80px*/ /*6.5%*/
     --padding-horizontal-main-container: 20px;
+    /*margins*/
+    --margin-bottom-main: 75px;
+    --margin-bottom-secondary: 35px;
 
     /*colors*/
     --color-primary: #68B738;
@@ -22,11 +25,7 @@
 
     --font-paragraph: 'Roboto';
     --font-heading: 'Oswald';
-
-
-    /*margins*/
-    --margin-bottom-index-main: 75px;
-    --margin-bottom-index-secondary: 35px;
+    
 }
 
 
@@ -35,13 +34,11 @@
 
 @media screen and (max-width: 991px) {
     :root {
-        --gap-between-columns: 150px;
+        --gap-between-columns: 60px;
         --margin-bottom-index-main: 60px;
         
     }
 }
-
-
 
 
 @media screen and (max-width: 767px) {

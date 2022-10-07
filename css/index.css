@@ -1,8 +1,8 @@
 @import url(styles.css);
 
 
-h2, section {
-    margin-bottom: var(--margin-bottom-index-main);
+h2, h3, section {
+    margin-bottom: var(--margin-bottom-main);
 }
 
 /*_________________________________header start*/
@@ -21,7 +21,7 @@ h2, section {
 .banner .banner--background-img {
     position: absolute;
     height: 100vh;
-    width: calc( 50vw + (var(--gap-between-columns) / 2) );       /*50vw + half of grid-column-gap: 80px;*/
+    width: calc( 50vw + (var(--gap-between-columns) / 2) );       
     overflow-x: hidden;
     top: 0;
     z-index: -1;
@@ -56,11 +56,11 @@ h2, section {
     padding: 50px;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--margin-bottom-index-secondary);
+    margin-bottom: var(--margin-bottom-secondary);
 }
 .category .row-box {
     align-items: center;
-    margin-bottom: var(--margin-bottom-index-secondary);
+    margin-bottom: var(--margin-bottom-secondary);
 }
 .category--picture {
     margin-right: 46px;
@@ -91,7 +91,7 @@ h2, section {
     text-transform: uppercase;
 }
 .category p {
-    margin-bottom: var(--margin-bottom-index-secondary);
+    margin-bottom: var(--margin-bottom-secondary);
 }
 .category .link-arrow {
     margin-top: auto;
@@ -136,7 +136,7 @@ h2, section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--margin-bottom-index-secondary);
+    margin-bottom: var(--margin-bottom-secondary);
 }
 /*_________________________________.how-it-works end*/
 /*_____________________________________example*/
@@ -147,7 +147,7 @@ h2, section {
     content: '';
     position: absolute;
     z-index: -1;
-    top: calc(var(--margin-bottom-index-main) + var(--margin-bottom-index-secondary));
+    top: calc(var(--margin-bottom-main) + var(--margin-bottom-secondary));
     background-color: var(--color-secondary);
     /*width: calc(100% + (var(--padding-horizontal-main-container) * 2) );*/
     width: 100vw;
@@ -160,7 +160,7 @@ h2, section {
     padding-top: 30px;
     color: var(--color-text-secondary);
     max-width: 440px;
-    margin-bottom: var(--margin-bottom-index-main);
+    margin-bottom: var(--margin-bottom-main);
 }
 .statistics--numbers {
     position: relative;
@@ -338,8 +338,11 @@ div#comparison figure div {
     .how-it-works {
         border-bottom: 1px solid var(--color-border);
     }
+    .how-it-works .container-grid-4col {
+        grid-column-gap: 150px;
+    }
     .how-it-works li {
-        margin: var(--margin-bottom-index-secondary) 0;
+        margin: var(--margin-bottom-secondary) 0;
     }
     /*__________________________________________.how-it-works end*/
     /*_____________________________________example*/
@@ -398,7 +401,7 @@ div#comparison figure div {
     .banner {
         height: fit-content;
         padding: 30px 0 0 0;
-        margin-bottom: var(--margin-bottom-index-main);
+        margin-bottom: var(--margin-bottom-main);
     }
     .banner .banner--background-img {
         display: block;
@@ -432,7 +435,7 @@ div#comparison figure div {
     .category .row-box {
         flex-direction: row;
         justify-content: start;
-        margin-bottom: var(--margin-bottom-index-secondary);
+        margin-bottom: var(--margin-bottom-secondary);
     }
     .category--picture {
         transform: none;
@@ -447,7 +450,7 @@ div#comparison figure div {
     }
     .category p {
         width: 100%;
-        padding-bottom: var(--margin-bottom-index-secondary);
+        padding-bottom: var(--margin-bottom-secondary);
         border-bottom: 1px solid var(--color-border);
     }
     /*___________________________________ category end*/
@@ -477,7 +480,7 @@ div#comparison figure div {
         height: 450px;
     }
     .example h2 {
-        padding-top: var(--margin-bottom-index-secondary);
+        padding-top: var(--margin-bottom-secondary);
     }
     .statistics {
         flex-direction: column;
