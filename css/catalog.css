@@ -54,23 +54,6 @@ h2, h3, section {
 }
 /*___________________________________________product-card end*/
 /*_____________________________________________additional-items*/
-.additional-items::before {
-    content: '';
-    height: 24px;
-    width: 100vw;
-    z-index: -1;
-    background-color: transparent;
-    border-bottom: 2px solid var(--color-primary);
-    position: absolute;
-    left: 0;
-    overflow: hidden;
-}
-.additional-items h3 {
-    background-color: #fff;
-    width: fit-content;
-    padding: 0 35px;
-    transform: translate(-35px, 0);                     /*overflow need to hide but there's a bug*/
-}
 .additional-items-box {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -236,9 +219,6 @@ h2, h3, section {
     }
     /*___________________________________________product-card end*/
     /*_____________________________________________additional-items*/
-    .additional-items::before {
-        height: 18px;
-    }
     .additional-items-box-row {
         display: block;
         padding: 13px 0;

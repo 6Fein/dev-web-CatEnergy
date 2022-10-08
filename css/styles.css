@@ -7,7 +7,7 @@
 }
 ::selection {
     background-color: #000;
-    color: #fff;
+    color: var(--color-secondary);
 }
 body {
     position: relative;
@@ -68,6 +68,23 @@ h5,
 h6,
 .title-6 {
     font-size: 20px;
+}
+.green-line-title-container h3 {
+    background-color: #fff;
+    width: fit-content;
+    padding: 0 35px;
+    transform: translate(-35px, 0);             /*overflow need to hide but there's a bug*/
+}
+.green-line-title-container::before {
+    content: '';
+    height: 24px;
+    width: 100vw;
+    z-index: -1;
+    background-color: transparent;
+    border-bottom: 2px solid var(--color-primary);
+    position: absolute;
+    left: 0;
+    overflow: hidden;
 }
 /*___________________________________________headings end*/
 /*___________________________________________buttons start*/
@@ -381,6 +398,9 @@ h6,
     h6,
     .title-6 {
         font-size: 16px;
+    }
+    .green-line-title-container::before {
+        height: 18px;
     }
     /*___________________________________________headings end*/
     /*___________________________________________buttons start*/

@@ -33,44 +33,141 @@
 <!--MAIN CONTENT START-->
 <div class="container-main">
 
-
+    <h1>Подбор программы</h1>
+    <p class="title-4 form-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
     <form>
         <fieldset>
-            <label for="name">Your name:</label>
-            <input type="text" id="name" name="name" placeholder="text type">
+            <div class="container-grid-2col">
+                <div class="input-box">
+                    <div class="input-row">
+                        <label for="cat-name">Имя:*</label>
+                        <input type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="cat-weight">Вес (кг):*</label>
+                        <input type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="cat-age">Возраст (лет):*</label>
+                        <input type="number" id="cat-age" name="cat-age" placeholder="7" required>
+                    </div>
+                </div>
+                <div class="input-box radio-box">
+                    <div class="input-row">
+                        <input type="radio" id="program-weight-loss" name="program" value="weight-loss">
+                        <label for="program-weight-loss">Похудение</label>
+                    </div>
+                    <div class="input-row">
+                        <input type="radio" id="program-weight-gain" name="program" value="weight-gain">
+                        <label for="program-weight-gain">Набор массы</label>
+                    </div>
+                    <div class="input-row">
+                        <input type="radio" id="program-weight-idk" name="program" value="program-need-advice">
+                        <label for="program-weight-idk">Не знаю (Нужен ваш совет)</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset class="green-line-title-container">
+            <h3>Контактные данные (владельца кота)</h3>
+
+            <div class="container-grid-2col">
+                <div class="input-row">
+                    <label class="label-email" for="owner-email">E-mail:*</label>
+                    <input type="email" id="owner-email" name="owner-email" placeholder="кuklachev@gmail.com" required>
+                </div>
+                <div class="input-row">
+                    <label class="label-phone" for="owner-phone">Телефон:*</label>
+                    <input type="email" id="owner-phone" name="owner-phone" placeholder="####" required>
+                </div>
+            </div>
         </fieldset>
 
-        <fieldset>
-            <div class="checkbox-container">
-                <input type="radio" id="html" name="fav_language" value="HTML">
-                <label for="html">HTML</label>
-            </div>
-            <div class="checkbox-container">
-                <input type="radio" id="css" name="fav_language" value="CSS">
-                <label for="css">CSS</label>
-            </div>
-            <div class="checkbox-container">
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="javascript">JavaScript</label>
+        <fieldset class="green-line-title-container">
+            <h3>Комментарий</h3>
+            <textarea id="comment" name="comment" rows="3" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <fieldset class="green-line-title-container">
+            <h3>Дополнительно</h3>
+            <div class="container-grid-4col">
+                <div class="input-row">
+                    <input type="checkbox" id="add-sweetener" name="add-sweetener" value="add-sweetener">
+                    <label for="add-sweetener">сахарозаменитель</label>
+                </div>
+                <div class="input-row">
+                    <input type="checkbox" id="add-water" name="add-water" value="add-water">
+                    <label for="add-water">питьевая вода</label>
+                </div>
+                <div class="input-row">
+                    <input type="checkbox" id="add-milk" name="add-milk" value="add-milk">
+                    <label for="add-milk">молоко</label>
+                </div>
+                <div class="input-row">
+                    <input type="checkbox" id="add-vitamins" name="add-vitamins" value="add-vitamins">
+                    <label for="add-vitamins">витамины</label>
+                </div>
             </div>
         </fieldset>
 
-        <fieldset>
-            <div class="checkbox-container">
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1"> I have a bike</label>
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2"> I have a car</label>
-            </div>
+
+        <fieldset class="container-grid-2col">
+            <input class="button-catalog-main button-big" type="submit" value="Отправить заявку">
+            <p class="form-notes">* — Обязательные поля</p>
         </fieldset>
+
     </form>
-
 
 </div> <!--container-main end-->
 <!--MAIN CONTENT END-->
+
+
+
+<!--MAP FOOTER START-->
+    <div class="map">
+        <div class="container-main">
+            <div class="map--info">
+                <div class="title-4">приглашаем к сотрудничеству дилеров!</div>
+                <address>
+                    <span>Майдан Незалежності, 2</span>
+                    <span>Київ</span>
+                    <span>Україна</span>
+                </address>
+            </div>
+        </div> <!--container-main end-->
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.492206497642!2d30.521075400955887!3d50.45055844513794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce50f8b6e3c3%3A0xb528dc4d6dadc4f8!2sIndependence%20Square%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2sus!4v1664845054984!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="container-main">
+
+            <a href="index.html"><img src="img/footer-logo.svg" alt="logo"></a>
+
+            <div class="social-media">
+                <a href="https://vk.com/">
+                    <div class="social-media-icon" style="background-position: 0 0;"></div>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <div class="social-media-icon" style="background-position: -57px 0;"></div>
+                </a>
+                <a href="https://www.facebook.com/">
+                    <div class="social-media-icon" style="background-position: -109px 0;"></div>
+                </a>
+            </div>
+
+            <p class="alona">
+                <a href="https://www.linkedin.com/in/alona-usova-vi-fein/">Alona Usova</a>
+            </p>
+        </div>
+    </footer>
+<!--MAP FOOTER END-->
+
+
 </body>
 
 </html>
