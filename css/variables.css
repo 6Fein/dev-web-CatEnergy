@@ -35,7 +35,7 @@
 @media screen and (max-width: 991px) {
     :root {
         --gap-between-columns: 60px;
-        --margin-bottom-index-main: 60px;
+        --margin-bottom-main: 60px;
         
     }
 }
@@ -44,7 +44,7 @@
 @media screen and (max-width: 767px) {
     :root {
         --font-size-paragraph: 14px;
-        --margin-bottom-index-main: 35px;  /*should be 35/ 35-20=15*/
-        --margin-bottom-index-secondary: 20px;
+        --margin-bottom-main: 35px;  /*should be 35/ 35-20=15*/
+        --margin-bottom-secondary: 20px;
     }
 }

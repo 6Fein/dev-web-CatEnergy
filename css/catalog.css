@@ -71,19 +71,11 @@ h2, h3, section {
     padding: 0 35px;
     transform: translate(-35px, 0);                     /*overflow need to hide but there's a bug*/
 }
-.additional-items .container-grid-4col {
-    grid-row-gap: 0;
-}
-/*.additional-items .container-grid-4col * {
-    border: 1px solid red;
-}*/
-.additional-items-row {
+.additional-items-box {
     grid-column-start: 1;
     grid-column-end: 4;
-
-    /*display: grid;
-    grid-template-columns: subgrid;*/
-
+}
+.additional-items-box-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: var(--gap-between-columns);                     /*!!!!!!!!!!!!!!!*/
@@ -92,41 +84,38 @@ h2, h3, section {
     padding: 13px 0;
     border-bottom: 1px solid var(--color-border);
 }
-.additional-items-row:first-child {
+.additional-items-box-row:first-child {
     border-top: 1px solid var(--color-border);
 }
-.additional-items-row h4 {
+.additional-items-box-row h4 {
     text-transform: uppercase;
 }
-.additional-items-row .row-box {
+.additional-items-box-row .row-box {
     justify-content: space-between;
     color: var(--color-text-secondary);
     white-space: nowrap;
 }
-.additional-items-row .price {
+.additional-items-box-row .price {
     transform: translate(100%, 0); 
 }
-/*.additional-items-row button {
+.additional-items-box-row button {
     width: 100%;
-}*/
-.additional-items-bonus {
-    grid-column-start: 4;
-    grid-row-start: 1;
-    grid-row-end: 5;
-
-    border: 1px solid red;
 }
-
-
-
-
-
-
-
-
-
-
-
+.additional-items-gift {
+    background: url(../img/catalog/gift-bg-desktop.jpg) center / cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.additional-items-gift img {
+    width: 80px;
+}
+.additional-items-gift p {
+    max-width: 160px;
+}
 /*__________________________________________________additional-items end*/
 
 
@@ -136,14 +125,43 @@ h2, h3, section {
 
 
 
+
+
+
+
 @media screen and (max-width: 991px) {
+    /*_____________________________________________additional-items*/
+    .additional-items-box {
+        margin-bottom: var(--margin-bottom-main);
+    }
     .additional-items .container-grid-4col {
         display: block;
     }
-    .additional-items-row {
+    .additional-items-box-row {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: var(--gap-between-columns);
+        padding: 26px 0;
     }
+    .additional-items-box-row h4,
+    .additional-items-box-row .row-box {
+        margin-bottom: 26px;
+    }
+    .additional-items-box-row .price {
+        transform: none;
+    }
+    .additional-items-box-row button {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .additional-items-gift {
+        height: 200px;
+        background: url(../img/catalog/gift-bg-tablet.jpg) center / cover;
+        flex-direction: row;
+        text-align: start;
+        justify-content: space-between;
+        padding: 0 124px 0 78px;
+    }
+    /*_____________________________________________additional-items end*/
 }
 
 
@@ -217,7 +235,27 @@ h2, h3, section {
         margin-bottom: 0;
     }
     /*___________________________________________product-card end*/
-
+    /*_____________________________________________additional-items*/
+    .additional-items::before {
+        height: 18px;
+    }
+    .additional-items-box-row {
+        display: block;
+        padding: 13px 0;
+    }
+    .additional-items-box-row h4,
+    .additional-items-box-row .row-box {
+        margin-bottom: 13px;
+    }
+    .additional-items-gift {
+        height: 280px;
+        background: url(../img/catalog/gift-bg-mobile.jpg) center / cover;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    /*_____________________________________________additional-items end*/
 
 
 
