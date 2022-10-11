@@ -67,16 +67,16 @@ textarea {
     right: 18px;
 }
 /*_________________________________________________ radio checkbox */
-[type="radio"],
-[type="checkbox"] {
+form [type="radio"],
+form [type="checkbox"] {
     width: 40px;
     height: 40px;
     margin: 0 20px 0 0;
     opacity: 0;
     cursor: pointer;
 }
-[type="checkbox"]~label::before,
-[type="radio"]~label::before {
+form [type="checkbox"]~label::before,
+form [type="radio"]~label::before {
     content: '';
     box-sizing: border-box;
     width: 40px;
@@ -90,15 +90,15 @@ textarea {
 
     cursor: pointer;
 }
-[type="radio"]~label::before {
+form [type="radio"]~label::before {
     border-radius: 20px;
 }
-[type="checkbox"]:hover~label::before,
-[type="radio"]:hover~label::before {
+form [type="checkbox"]:hover~label::before,
+form [type="radio"]:hover~label::before {
     border-color: var(--color-border-hover);
 }
-[type="checkbox"]:checked~label::before,
-[type="radio"]:checked~label::before {
+form [type="checkbox"]:checked~label::before,
+form [type="radio"]:checked~label::before {
     content: '';
     box-sizing: border-box;
     width: 40px;
@@ -109,10 +109,10 @@ textarea {
 
     cursor: pointer;
 }
-[type="checkbox"]:checked~label::before {
+form [type="checkbox"]:checked~label::before {
     background: url(../img/form/checkbox.svg) no-repeat center #fff;
 }
-[type="radio"]:checked~label::before {
+form [type="radio"]:checked~label::before {
     background: url(../img/form/radiobutton.svg) no-repeat center #fff;
 }
 /*_______________________________________________________general rules for inputs end*/
@@ -137,4 +137,82 @@ h3 {
     align-items: center;
     font-family: var(--font-paragraph);
     font-size: var(--font-size-paragraph);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+    .input-box {
+        height: auto;
+        margin-bottom: var(--margin-bottom-main);
+    }
+    .input-box:last-child {
+        margin-bottom: 0;
+    }
+    .input-row {
+        margin-bottom: 20px;
+    }
+    .input-row:last-child {
+        margin-bottom: 0;
+    }
+    .container-grid-2col.submit-container {
+        display: grid;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .radio-box {
+        padding: var(--margin-bottom-secondary) 0;
+        border-left: none;
+        border-right: none;
+    }
+
+
+
+    .container-grid-2col.submit-container {
+        display: block;
+    }
+    .submit-container [type="submit"] {
+        margin-bottom: var(--margin-bottom-secondary);
+    }
+    .submit-container .form-notes {
+        justify-content: center;
+    }
 }
